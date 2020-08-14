@@ -1,0 +1,50 @@
+import java.util.*;
+class student {
+    int rollnumber;
+    String name;
+    int age;
+    double weight;
+    double height;
+    int mark;
+   
+    void getdata()
+    {
+     
+      System.out.println("enter rollno name age weight height mark ");
+      Scanner obj=new Scanner(System.in);
+      rollnumber=obj.nextInt();
+      name=obj.next();
+      age=obj.nextInt();
+      weight=obj.nextDouble();
+      height=obj.nextDouble();
+      mark=obj.nextInt();
+     
+    }
+    String to_String(){
+        return "\nrollnumber:"+rollnumber +"\nname:"+name ;
+    }
+   
+           
+}
+ class NewMain {
+
+    public static void main(String[] args) {
+     
+          int i;
+          student obb[]=new student[5];
+          Scanner obj=new Scanner(System.in);
+          for( i=0;i<5;i++){
+              System.out.println("enetr student "+(i+1)+" details");
+              obb[i]=new student();
+              obb[i].getdata();
+          }
+          for(i=0;i<5;i++){
+              if((obb[i].age>=19)||(obb[i].weight>=90))
+                System.out.println(obb[i].to_String());
+             
+          }
+         
+
+    }
+   
+}
